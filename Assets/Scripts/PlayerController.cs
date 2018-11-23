@@ -76,7 +76,8 @@ public class PlayerController : MonoBehaviour {
 				if (Input.GetKeyDown (KeyCode.LeftControl) && numTiros>0) {
 					Fire (); 
 
-				} else {
+				} else if (Input.GetKey (KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.DownArrow))
+                {
 					anim.SetTrigger ("Corre");
 				}
 			}

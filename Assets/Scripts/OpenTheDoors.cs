@@ -9,16 +9,17 @@ public class OpenTheDoors : MonoBehaviour {
 
 		void OnTriggerEnter(Collider other) 
 		{
-			if (other.gameObject.CompareTag("Player"))
+			if (other.gameObject.CompareTag("Player") && Chave == true)
 			{
 			anim.Play("open");
 			}
 		}
 	void OnTriggerExit(Collider other) 
 	{
-		if (other.gameObject.CompareTag("Player"))
+		if (other.gameObject.CompareTag("Player") && Chave == true)
 		{
 			anim.Play("close");
+            Chave = false;
 		}
 	}
 
@@ -29,5 +30,3 @@ public class OpenTheDoors : MonoBehaviour {
 
 
 }
-
-

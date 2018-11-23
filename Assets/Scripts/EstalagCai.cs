@@ -9,6 +9,6 @@ public class EstalagCai : MonoBehaviour {
 		if (hit.gameObject.tag == "Player") {
 
 			Estalag.SetBool ("Cai", true);
-		} 
+		}
 	}
 }
